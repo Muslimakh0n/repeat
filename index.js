@@ -28,6 +28,8 @@
 
 // x()
 
+// clouser example
+
 function x() {
     for (var i = 1; i <=5; i++) {
         function close(x) {
@@ -43,3 +45,26 @@ function x() {
 }
 
 x();
+
+
+// clouser example
+
+function parent(){
+     var number = 12;      
+
+     function child(){
+           console.log(number);
+     }
+     child();    // 12
+}
+
+let count = (function(){
+  let counter = 0;
+  return function(){ 
+    return counter += 1; 
+  }
+})();
+
+count();   // 1
+count();   // 2
+count();   // 3
