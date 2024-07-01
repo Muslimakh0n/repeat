@@ -14,16 +14,32 @@
 //     console.log(c)
 
 
-function x() {
-    for (let i =1; i <= 5; i++) {
-        setTimeout(function(){
-            console.log(i);
+// function x() {
+//     for (let i =1; i <= 5; i++) {
+//         setTimeout(function(){
+//             console.log(i);
 
-        }, i * 1000)
+//         }, i * 1000)
        
         
-    }
-    console.log("Hiiiiiiii");
-} 
+//     }
+//     console.log("Hiiiiiiii");
+// } 
 
-x()
+// x()
+
+function x() {
+    for (var i = 1; i <=5; i++) {
+        function close(x) {
+            setTimeout(function () {
+                console.log(x);
+            }, x*1000);
+        };
+        close(i)
+        
+    }
+
+    console.log("smile :)");
+}
+
+x();
