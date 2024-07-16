@@ -204,3 +204,44 @@
 
 // map.clear();
 // console.log(map.size); // 0
+
+
+// dz 1
+
+const students = [
+  { name: "Quincy", percent: 96 },
+  { name: "Jason", percent: 84 },
+  { name: "Alexis", percent: 100 },
+  { name: "Sam", percent: 65 },
+  { name: "Katie", percent: 90 },
+  { name: "Anna", percent: 75 },
+];
+
+const assignGrades = (students) => {
+  return students.map(student => {
+    let grade;
+    if (student.percent >= 85 && student.percent <= 100) {
+      grade = 5;
+    } else if (student.percent >= 70 && student.percent < 85) {
+      grade = 4;
+    } else if (student.percent >= 60 && student.percent < 70) {
+      grade = 3;
+    }
+    return { ...student, grade: grade };
+  });
+};
+
+// function to get name w grades
+const getNamesWithGrade = (grade) => {
+  const studentsWithGrades = assignGrades(students);
+  return studentsWithGrades
+    .filter(student => student.grade === grade)
+    .map(student => student.name);
+};
+
+console.log(getNamesWithGrade(5)); 
+
+
+// 2 
+
+
